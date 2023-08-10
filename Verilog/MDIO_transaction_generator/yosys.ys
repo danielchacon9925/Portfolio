@@ -1,0 +1,7 @@
+read_verilog generadortrans_MDIO.v
+proc; opt; techmap; opt
+dfflibmap -liberty cmos_cells.lib
+abc -liberty cmos_cells.lib
+write_verilog  generadortrans_MDIO_synth.v
+
+

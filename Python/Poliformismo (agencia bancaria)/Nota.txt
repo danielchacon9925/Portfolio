@@ -1,0 +1,13 @@
+Uso correcto del GIT (al menos 4 commits:.........................................................................30%
+Desarrollo del modelo de clases:..................................................................................37.5% 
+Desarrollo de aplicación de caso de uso:..........................................................................10% 
+Desarrollo de aplicación automática:..............................................................................0%
+Nota:.............................................................................................................77.5%
+
+Comentarios:
+
+- Cuando se prueba el funcionaiment para usuarios ed ahorro, al aplicar, no se disminuye el monton de disponible con el 
+monto que va hacia ahorros.
+- El menu no parece funcionar.
+- No parece haber implementado aplicacion automática.
+
