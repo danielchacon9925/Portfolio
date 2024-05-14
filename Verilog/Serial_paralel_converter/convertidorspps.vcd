@@ -1,0 +1,505 @@
+$date
+	Thu Aug 17 15:58:57 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module testbench $end
+$var wire 1 ! S_START $end
+$var wire 1 " S_OUT $end
+$var wire 1 # S_IN $end
+$var wire 1 $ RESET $end
+$var wire 1 % P_VALID $end
+$var wire 32 & P_OUT [31:0] $end
+$var wire 32 ' P_IN [31:0] $end
+$var wire 1 ( CLK $end
+$scope module convertidorINST $end
+$var wire 1 ! S_START $end
+$var wire 1 " S_OUT $end
+$var wire 1 # S_IN $end
+$var wire 1 $ RESET $end
+$var wire 1 % P_VALID $end
+$var wire 32 ) P_OUT [31:0] $end
+$var wire 32 * P_IN [31:0] $end
+$var wire 1 ( CLK $end
+$scope module PS $end
+$var wire 1 ! S_START $end
+$var wire 1 $ RESET $end
+$var wire 32 + P_IN [31:0] $end
+$var wire 1 ( CLK $end
+$var reg 1 " S_OUT $end
+$var integer 32 , cont [31:0] $end
+$upscope $end
+$scope module SP $end
+$var wire 1 - conver_ON $end
+$var wire 1 # S_IN $end
+$var wire 1 $ RESET $end
+$var wire 1 ( CLK $end
+$var reg 32 . P_OUT [31:0] $end
+$var reg 1 % P_VALID $end
+$var integer 32 / cont [31:0] $end
+$scope module conv $end
+$var wire 1 # S_IN $end
+$var wire 1 $ RESET $end
+$var wire 1 ( CLK $end
+$var reg 1 - conv $end
+$var reg 8 0 nxt_state [7:0] $end
+$var reg 8 1 state [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module probadorINST $end
+$var wire 32 2 P_OUT [31:0] $end
+$var wire 1 % P_VALID $end
+$var wire 1 " S_OUT $end
+$var reg 1 ( CLK $end
+$var reg 32 3 P_IN [31:0] $end
+$var reg 1 $ RESET $end
+$var reg 1 # S_IN $end
+$var reg 1 ! S_START $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx 3
+bx 2
+bx 1
+bx 0
+b100000 /
+bx .
+x-
+b100000 ,
+bx +
+bx *
+bx )
+0(
+bx '
+bx &
+x%
+x$
+x#
+x"
+x!
+$end
+#1
+1-
+b1 1
+1(
+b1 0
+0!
+1$
+#2
+0(
+#3
+b11111 ,
+b11111 /
+0%
+1(
+b1111111111111111 '
+b1111111111111111 *
+b1111111111111111 +
+b1111111111111111 3
+1!
+#4
+0-
+b10 0
+0(
+1#
+#5
+b100 0
+0-
+b10 1
+b11110 ,
+0"
+1(
+0#
+#6
+b10 0
+0(
+1#
+#7
+b11101 ,
+1-
+1(
+#8
+0-
+b100 0
+0(
+0#
+#9
+1-
+b11100 ,
+b10 0
+1(
+1#
+#10
+0-
+b100 0
+0(
+0#
+#11
+b11011 ,
+1-
+b10 0
+1(
+1#
+#12
+0(
+#13
+b11110 /
+b1xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx &
+b1xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx )
+b1xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx .
+b1xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 2
+b11010 ,
+1(
+#14
+0(
+#15
+b11001 ,
+b11101 /
+b11xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx &
+b11xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx )
+b11xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx .
+b11xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 2
+1(
+#16
+0(
+#17
+b11100 /
+b111xxxxxxxxxxxxxxxxxxxxxxxxxxxxx &
+b111xxxxxxxxxxxxxxxxxxxxxxxxxxxxx )
+b111xxxxxxxxxxxxxxxxxxxxxxxxxxxxx .
+b111xxxxxxxxxxxxxxxxxxxxxxxxxxxxx 2
+b11000 ,
+1(
+#18
+0(
+#19
+b10111 ,
+b11011 /
+b1111xxxxxxxxxxxxxxxxxxxxxxxxxxxx &
+b1111xxxxxxxxxxxxxxxxxxxxxxxxxxxx )
+b1111xxxxxxxxxxxxxxxxxxxxxxxxxxxx .
+b1111xxxxxxxxxxxxxxxxxxxxxxxxxxxx 2
+1(
+#20
+0(
+#21
+b11010 /
+b11111xxxxxxxxxxxxxxxxxxxxxxxxxxx &
+b11111xxxxxxxxxxxxxxxxxxxxxxxxxxx )
+b11111xxxxxxxxxxxxxxxxxxxxxxxxxxx .
+b11111xxxxxxxxxxxxxxxxxxxxxxxxxxx 2
+b10110 ,
+1(
+#22
+0(
+#23
+b10101 ,
+b11001 /
+b111111xxxxxxxxxxxxxxxxxxxxxxxxxx &
+b111111xxxxxxxxxxxxxxxxxxxxxxxxxx )
+b111111xxxxxxxxxxxxxxxxxxxxxxxxxx .
+b111111xxxxxxxxxxxxxxxxxxxxxxxxxx 2
+1(
+#24
+0(
+#25
+b11000 /
+b1111111xxxxxxxxxxxxxxxxxxxxxxxxx &
+b1111111xxxxxxxxxxxxxxxxxxxxxxxxx )
+b1111111xxxxxxxxxxxxxxxxxxxxxxxxx .
+b1111111xxxxxxxxxxxxxxxxxxxxxxxxx 2
+b10100 ,
+1(
+#26
+0(
+#27
+b10011 ,
+b10111 /
+b11111111xxxxxxxxxxxxxxxxxxxxxxxx &
+b11111111xxxxxxxxxxxxxxxxxxxxxxxx )
+b11111111xxxxxxxxxxxxxxxxxxxxxxxx .
+b11111111xxxxxxxxxxxxxxxxxxxxxxxx 2
+1(
+#28
+0(
+#29
+b10110 /
+b111111111xxxxxxxxxxxxxxxxxxxxxxx &
+b111111111xxxxxxxxxxxxxxxxxxxxxxx )
+b111111111xxxxxxxxxxxxxxxxxxxxxxx .
+b111111111xxxxxxxxxxxxxxxxxxxxxxx 2
+b10010 ,
+1(
+#30
+0(
+#31
+b10001 ,
+b10101 /
+b1111111111xxxxxxxxxxxxxxxxxxxxxx &
+b1111111111xxxxxxxxxxxxxxxxxxxxxx )
+b1111111111xxxxxxxxxxxxxxxxxxxxxx .
+b1111111111xxxxxxxxxxxxxxxxxxxxxx 2
+1(
+#32
+0(
+#33
+b10100 /
+b11111111111xxxxxxxxxxxxxxxxxxxxx &
+b11111111111xxxxxxxxxxxxxxxxxxxxx )
+b11111111111xxxxxxxxxxxxxxxxxxxxx .
+b11111111111xxxxxxxxxxxxxxxxxxxxx 2
+b10000 ,
+1(
+#34
+0(
+#35
+b1111 ,
+b10011 /
+b111111111111xxxxxxxxxxxxxxxxxxxx &
+b111111111111xxxxxxxxxxxxxxxxxxxx )
+b111111111111xxxxxxxxxxxxxxxxxxxx .
+b111111111111xxxxxxxxxxxxxxxxxxxx 2
+1(
+#36
+0(
+#37
+b10010 /
+b1111111111111xxxxxxxxxxxxxxxxxxx &
+b1111111111111xxxxxxxxxxxxxxxxxxx )
+b1111111111111xxxxxxxxxxxxxxxxxxx .
+b1111111111111xxxxxxxxxxxxxxxxxxx 2
+b1110 ,
+1"
+1(
+#38
+0(
+#39
+b1101 ,
+b10001 /
+b11111111111111xxxxxxxxxxxxxxxxxx &
+b11111111111111xxxxxxxxxxxxxxxxxx )
+b11111111111111xxxxxxxxxxxxxxxxxx .
+b11111111111111xxxxxxxxxxxxxxxxxx 2
+1(
+#40
+0(
+#41
+b10000 /
+b111111111111111xxxxxxxxxxxxxxxxx &
+b111111111111111xxxxxxxxxxxxxxxxx )
+b111111111111111xxxxxxxxxxxxxxxxx .
+b111111111111111xxxxxxxxxxxxxxxxx 2
+b1100 ,
+1(
+#42
+0(
+#43
+b1011 ,
+b1111 /
+b1111111111111111xxxxxxxxxxxxxxxx &
+b1111111111111111xxxxxxxxxxxxxxxx )
+b1111111111111111xxxxxxxxxxxxxxxx .
+b1111111111111111xxxxxxxxxxxxxxxx 2
+1(
+#44
+0(
+#45
+b1110 /
+b11111111111111111xxxxxxxxxxxxxxx &
+b11111111111111111xxxxxxxxxxxxxxx )
+b11111111111111111xxxxxxxxxxxxxxx .
+b11111111111111111xxxxxxxxxxxxxxx 2
+b1010 ,
+1(
+#46
+0(
+#47
+b1001 ,
+b1101 /
+b111111111111111111xxxxxxxxxxxxxx &
+b111111111111111111xxxxxxxxxxxxxx )
+b111111111111111111xxxxxxxxxxxxxx .
+b111111111111111111xxxxxxxxxxxxxx 2
+1(
+#48
+0(
+#49
+b1100 /
+b1111111111111111111xxxxxxxxxxxxx &
+b1111111111111111111xxxxxxxxxxxxx )
+b1111111111111111111xxxxxxxxxxxxx .
+b1111111111111111111xxxxxxxxxxxxx 2
+b1000 ,
+1(
+#50
+0(
+#51
+b111 ,
+b1011 /
+b11111111111111111111xxxxxxxxxxxx &
+b11111111111111111111xxxxxxxxxxxx )
+b11111111111111111111xxxxxxxxxxxx .
+b11111111111111111111xxxxxxxxxxxx 2
+1(
+#52
+0(
+#53
+b1010 /
+b111111111111111111111xxxxxxxxxxx &
+b111111111111111111111xxxxxxxxxxx )
+b111111111111111111111xxxxxxxxxxx .
+b111111111111111111111xxxxxxxxxxx 2
+b110 ,
+1(
+#54
+0(
+#55
+b101 ,
+b1001 /
+b1111111111111111111111xxxxxxxxxx &
+b1111111111111111111111xxxxxxxxxx )
+b1111111111111111111111xxxxxxxxxx .
+b1111111111111111111111xxxxxxxxxx 2
+1(
+#56
+0(
+#57
+b1000 /
+b11111111111111111111111xxxxxxxxx &
+b11111111111111111111111xxxxxxxxx )
+b11111111111111111111111xxxxxxxxx .
+b11111111111111111111111xxxxxxxxx 2
+b100 ,
+1(
+#58
+0(
+#59
+b11 ,
+b111 /
+b111111111111111111111111xxxxxxxx &
+b111111111111111111111111xxxxxxxx )
+b111111111111111111111111xxxxxxxx .
+b111111111111111111111111xxxxxxxx 2
+1(
+#60
+0(
+#61
+b110 /
+b1111111111111111111111111xxxxxxx &
+b1111111111111111111111111xxxxxxx )
+b1111111111111111111111111xxxxxxx .
+b1111111111111111111111111xxxxxxx 2
+b10 ,
+1(
+#62
+0(
+#63
+b1 ,
+b101 /
+b11111111111111111111111111xxxxxx &
+b11111111111111111111111111xxxxxx )
+b11111111111111111111111111xxxxxx .
+b11111111111111111111111111xxxxxx 2
+1(
+#64
+0(
+#65
+b100 /
+b111111111111111111111111111xxxxx &
+b111111111111111111111111111xxxxx )
+b111111111111111111111111111xxxxx .
+b111111111111111111111111111xxxxx 2
+b0 ,
+1(
+#66
+0(
+#67
+b11111111111111111111111111111111 ,
+b11 /
+b1111111111111111111111111111xxxx &
+b1111111111111111111111111111xxxx )
+b1111111111111111111111111111xxxx .
+b1111111111111111111111111111xxxx 2
+1(
+#68
+0(
+#69
+b10 /
+b11111111111111111111111111111xxx &
+b11111111111111111111111111111xxx )
+b11111111111111111111111111111xxx .
+b11111111111111111111111111111xxx 2
+b11111111111111111111111111111110 ,
+x"
+1(
+#70
+0(
+#71
+b11111111111111111111111111111101 ,
+b1 /
+b111111111111111111111111111111xx &
+b111111111111111111111111111111xx )
+b111111111111111111111111111111xx .
+b111111111111111111111111111111xx 2
+1(
+#72
+0(
+#73
+b0 /
+b1111111111111111111111111111111x &
+b1111111111111111111111111111111x )
+b1111111111111111111111111111111x .
+b1111111111111111111111111111111x 2
+b11111111111111111111111111111100 ,
+1(
+#74
+0(
+#75
+b11111111111111111111111111111011 ,
+1%
+b11111111111111111111111111111111 /
+b11111111111111111111111111111111 &
+b11111111111111111111111111111111 )
+b11111111111111111111111111111111 .
+b11111111111111111111111111111111 2
+1(
+#76
+0(
+#77
+b1 1
+0"
+0-
+0%
+b0 &
+b0 )
+b0 .
+b0 2
+1(
+0$
+#78
+0(
+#79
+1(
+#80
+0(
+#81
+1(
+#82
+0(
+#83
+1(
+#84
+0(
+#85
+1(
+#86
+0(
+#87
+1(
