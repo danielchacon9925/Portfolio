@@ -1,0 +1,28 @@
+Cada experimento tiene su archivo en bash que corre la simulación y genera archivos de texto y su archivo de python que extraer los datos y los tabula.
+Al finalizar la ejecución de las simulaciones se generará un archivo de excel con todos los resultados tabulados.
+
+
+Se utilizará la siguiente nomenclatura para los experimentos:
+
+	1. Efecto del tamaño del caché: TC
+	2. Efecto de la asociatividad del caché: AC
+	3. Efecto del tamaño del bloque de caché: BC
+	4. Efecto de la política de reemplazo de caché: RC.
+
+Instrucciones de simulación:
+
+1. Efecto del tamaño del caché(TC):
+	1.1. chmod +x TC.sh
+	1.2. ./TC.sh
+	
+2. Efecto de la asociatividad del caché(AC):
+	2.1. chmod +x AC.sh 
+	2.2. ./AC.sh 
+
+3. Efecto del tamaño del bloque de caché(BC):
+	3.1. chmod +x BC.sh  
+	3.2. ./BC.sh 
+
+4. Efecto de la política de reemplazo de caché(RC):
+	4.1. chmod +x RC.sh
+	4.2. ./RC.sh
