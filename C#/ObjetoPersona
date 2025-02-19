@@ -1,0 +1,105 @@
+﻿using System;
+
+public class Persona
+{
+    // Atributos privados
+    private string nombre;
+    private int edad;
+
+    ////////////////////////////////////////
+    // Modificación de atributos privados //
+    ////////////////////////////////////////
+    ///// Poliformismo para acceder a atributo privado
+    //////////////////////////////////////// 
+    /// Nombre /
+    public string GetNombre()
+    {
+        return nombre;
+    }
+    public void SetNombre(string value)
+    {
+        nombre = value;
+        Console.WriteLine($"Se ha configurado el nombre para {value}.");
+
+    }
+    /// Edad /
+    public int GetEdad()
+    {
+        return edad;
+    }
+    public void SetEdad(int value) 
+    { 
+        edad = value;
+        Console.WriteLine($"Se ha configurado la edad para {value} años.");
+    }
+
+    // Constructor de persona
+    // Permite utilizar clase las veces necesarias
+    public Persona(string nombre, int edad)
+    {
+        this.nombre = nombre;
+        this.edad = edad;
+        Console.WriteLine($"Se ha creado una nueva persona.");
+
+    }
+
+    // Método
+    public void Presentarse()
+    {
+        Console.WriteLine($"Hola, mi nombre es {nombre} y tengo {edad} años.");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        // Primera instancia de clase Persona
+        // new declara nueva instancia
+        Persona usuario1 = new Persona("Pedro", 30);
+
+        // Usar el método de la clase
+        usuario1.Presentarse();
+
+        // Modificación de atributos privados
+        Console.WriteLine($"Nombre: {usuario1.GetNombre()}");
+        Console.WriteLine($"Edad: {usuario1.GetEdad()}");
+
+        // Mostrar la pregunta al usuario
+        Console.WriteLine("¿Están los datos correctos? (sí/no):");
+
+        // Leer la respuesta del usuario
+        // Console.ReadLine(): lee entrada de usuario
+        // .Trim(): elimina cualquier espacio en blanco
+        // .ToLower(): convierte respuesta en minúscula para facilitar comparación
+        string respuesta = Console.ReadLine().Trim().ToLower();
+
+        // Procesar la respuesta
+        if (respuesta == "sí" || respuesta == "si" || respuesta == "s")
+        {
+            Console.WriteLine("Has respondido sí. Los datos son: ");
+            Console.WriteLine($"Nombre: {usuario1.GetNombre()}");
+            Console.WriteLine($"Edad: {usuario1.GetEdad()}");
+            Console.ReadLine();
+        }
+        else if (respuesta == "no" || respuesta == "n")
+        {
+            Console.WriteLine("Has respondido no. Por favor, corrige los datos. ");
+            Console.WriteLine(" Por favor, introduce el nombre:  ");
+            string name = Console.ReadLine();
+            usuario1.SetNombre(name);
+            Console.WriteLine(" Por favor, introduce la edad:  ");
+            int age = Convert.ToInt32(Console.ReadLine());
+            usuario1.SetEdad(age);
+            Console.ReadLine();
+        }
+        else
+        {
+            // Si la respuesta no es válida, pedir nuevamente
+            Console.WriteLine("Respuesta no válida. Por favor, responde 'sí' o 'no'.");
+        }
+
+
+
+    }
+}
