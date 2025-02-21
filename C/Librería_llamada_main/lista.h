@@ -1,5 +1,5 @@
 /** @file lista.h
- *  @brief Realiza la función de biblioteca, posee las funciones necesarias para que el programa main.c funcione correctamente.
+ *  @brief Header file: Declaration of functions and routines that can be reused in multiple programs
  *
  *  @details ....
  */
@@ -9,6 +9,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+
 
 typedef struct node {
 	int data; //**< data */
