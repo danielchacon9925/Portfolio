@@ -1,3 +1,4 @@
+// Implementation file: contains the actual code for the functions declared in the header files
 #include "lista.h"
 #include <stdio.h>
 
