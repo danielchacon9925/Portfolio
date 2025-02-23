@@ -10,7 +10,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
+// Node on a linked list
+// ALIAS for a structure: node
 typedef struct node {
 	int data; //**< data */
 	struct node* next; //**< pointer to next element */
@@ -33,7 +34,7 @@ node* createList(int first_value);
 node* readList(const char* filePath);
 
 /**
- *  @brief  Esta funcion regresa el puntero al primer elemento de la lista creada a partir del archivobinario ubicado en la ruta especificado por el parametro filePath.
+ *  @brief  Writes a linked list to the file
  *  @details el archivo antes mencionado contieneuna lista de n ́umeros enteros separados por cambios de l ́ınea.
  *  @param ...
  *  @return ...
