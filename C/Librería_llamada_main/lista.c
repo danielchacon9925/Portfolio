@@ -433,39 +433,40 @@ int insertElement(node** head, int pos, int new_value){
 	@param new_value Recibe valor a ingresar.
 	@returns Regresa 0 si se agrego correctamente o 1 si no se encontro direccion.
 	*/
+	// Pointer to the headpointer
 	node *lugar=(*head); 
-/**Puntero que se va a modificar*/
 	int i=0;
+	// new element pointer
 	node *nuevoelem=malloc(sizeof(node)); 
-/**Se asigna  memoria*/
+	// Check if memory was successfully allocated
 	if(nuevoelem==NULL){
 		return (1); 
-/**No se puede asignar memoria */
 	}
+	// Stores new value on data of the node
 	nuevoelem->data=new_value; /**Ingreso el dato*/
-
+	// Traverse positions
 	for(i=0;i<pos;i++){
+		// Insert at the begging
 		if(pos==0){
-			/**Se busca insertar al inicio*/
+			// Calls push front to add new value to the beggining
 			return push_front(head, new_value);
- /**Llamo a push_front y paso parametros*/
 		}
+		// Handle invalid position
 		if(pos-1<i){
-/**Si no se encontro la ubicacion*/
 			return 1;
 		}
+		// Handle insertion at the desired position
 		if(pos-1==i){
-/**El contador inicia en 0, se le  resta 1 como prueba*/
+			// Updates: 1. nuevoelem points to the node after the insertation
+			//			2. lugar points to new node
 			nuevoelem->next=lugar->next; 
-/**Nuevo elemento apunta al puntero anterior */
+			// next node points to new element
 			lugar->next=nuevoelem; 
-/**Puntero anterior apunta a nuevo elemento*/
 			return (0);
 		}
+		// Move to the next node
 		if(pos-1>i){
-/**No se ha encontrado la ubicacion deseada*/
 			lugar=lugar->next; 
-/**Proxima direccion a verificar*/
 		}
 	}
 }
@@ -481,42 +482,76 @@ int removeElement(node** head, int pos){
 	@param pos Recibe posicion donde se desea eliminar elemento.
 	@returns Regresa valor borrado o -1 si dio error.
 	*/
+	// Where data is going to be stored
 	int valor;
+	// Pointers
 	node *liberar=(*head);
 	node *anterior=(*head);
+	// Counter
 	int i=0;
-
+	// Check if memory was allocated successfully
 	while(anterior->next!=NULL){
-		/**Para recorrer toda la lista*/
+		// Error handling
 		if(pos-1<i){
 			return -1; 
-/**Hubo un error, no se encontro ubicacion*/
 		}
+		// Handle insertion at the desired position
 		if(pos-1==i){
-			valor=liberar->data;/**Guardo dato*/
+			// Store value
+			valor=liberar->data;
+			// Updates pointers
 			anterior->next=liberar->next;
- /**Ingresar direccion a que apuntaba el eliminado*/
+			// Unalloc memory pointing where data is stored
 			free(liberar);
- /**Libero memoria*/
 			return valor;
 		}
+		// Move to the next node
 		if(pos-1>i){
-			/**No se ha encontrado la ubicacion deseada*/
+			// Move pointers to next node
 			anterior=liberar; 
-/**Apunto a struct, valor anterior*/
 			liberar=liberar->next; 
-/**Me muevo al siguiente elemento*/
 			i++;
 		}
 	}
-
-
-
-
-
-
 }
+// New logic to test 
+/**
+int removeElement(node** head, int pos) {
+    // Handle empty list
+    if (*head == NULL) {
+        return -1;  // Return -1 if the list is empty
+    }
 
+    // Handle removal at position 0
+    if (pos == 0) {
+        node* liberar = *head;  // Node to be freed
+        int valor = liberar->data;  // Value of the removed node
+        *head = liberar->next;  // Update head to point to the next node
+        free(liberar);  // Free the memory of the removed node
+        return valor;  // Return the value of the removed node
+    }
+
+    // Traverse the list to find the node to remove
+    node* anterior = *head;
+    for (int i = 0; i < pos - 1; i++) {
+        if (anterior->next == NULL) {
+            return -1;  // Return -1 if the position is invalid
+        }
+        anterior = anterior->next;
+    }
+
+    // Remove the node at the specified position
+    node* liberar = anterior->next;  // Node to be freed
+    if (liberar == NULL) {
+        return -1;  // Return -1 if the position is invalid
+    }
+    int valor = liberar->data;  // Value of the removed node
+    anterior->next = liberar->next;  // Update the next pointer of the previous node
+    free(liberar);  // Free the memory of the removed node
+
+    return valor;  // Return the value of the removed node
+}
+ */
 
 
 int freeList(node* head){
@@ -529,14 +564,36 @@ int freeList(node* head){
 	@returns Regresa 0 para indicar correcta liberacion.
 	*/
 	while(head->next!=NULL){
-		node *liberar;
-		liberar=head; /**Para modificar puntero al primer elemento*/
-		head=head->next; /**Me muevo a siguiente elemento*/
+		node *liberar = head;
+		//liberar=head; /**Para modificar puntero al primer elemento*/
+		// Updates pointer to the next module
+		head=head->next; 
 		free(liberar); /**Libero memoria*/
 	}
 	free(head); /**Libero memoria*/
 	return (0);
 }
+// New logic to test 
+/*
+int freeList(node* head) {
+    // Handle empty list
+    if (head == NULL) {
+        return 0;  // Return 0 if the list is already empty
+    }
+
+    // Traverse the list and free each node
+    node* liberar;
+    while (head != NULL) {
+        liberar = head;  // Store the current node
+        head = head->next;  // Move to the next node
+        free(liberar);  // Free the current node
+    }
+
+    return 0;  // Return 0 to indicate success
+}
+*/
+
+
 
 int getElement(node* head, int index, int* valid){
 	/**
@@ -549,38 +606,81 @@ int getElement(node* head, int index, int* valid){
 	@param *valid Puntero usado para identificar valor valido.
 	@returns Regresa valor obtenido.
 	*/
-
-	node *elegido=head; 
-/**Puntero por  mover*/
+	// Pointer to the head
+	node *elegido=head;
+	// Data value obtained 
 	int valorget=0;
+	// Counter
 	int i=0;
+	// Traverse all the lsit
 	while (elegido->next!=NULL){
+		// Value found
 		if(index-1==i){ 
-/**Valor buscado*/
+			// Stores desired data value
 			valorget=elegido->data;
+			// set value of integer pointer to 0
 			(*valid)=0;
+			// Return desired value
 			return valorget;
 		}
-		if(index==0){ /**Se busca primer valor*/
+		// Value desired = first
+		if(index==0){ 
+			// Stores the value
 			valorget=elegido->data;
 			(*valid)=0;
+			// Return desired value
+			return valorget;
 		}
-		if(index-1>i){ /**Se busca en siguiente elemento*/
+		// Value desired = next element
+		if(index-1>i){ 
+			// Integer pointer update to the next node
 			elegido=elegido->next;
 			i++;
 			(*valid)=0;
 		}
-		if(index-1<i){ /**No se encontró*/
+		// Invalid index
+		if(index-1<i){ 
 			(*valid)=1;
 			break;
 		}
 	}
-
-
-
-
-
 }
+// New logic to try
+/*
+int getElement(node* head, int index, int* valid) {
+    // Handle empty list
+    if (head == NULL) {
+        *valid = 1;  // Set valid to 1 (failure)
+        return -1;   // Return an error value
+    }
+
+    // Handle retrieval at index 0
+    if (index == 0) {
+        *valid = 0;  // Set valid to 0 (success)
+        return head->data;  // Return the value of the first node
+    }
+
+    // Traverse the list to find the element at the specified index
+    node* elegido = head;
+    for (int i = 0; i < index; i++) {
+        if (elegido == NULL) {
+            *valid = 1;  // Set valid to 1 (failure)
+            return -1;   // Return an error value
+        }
+        elegido = elegido->next;
+    }
+
+    // Check if the element was found
+    if (elegido == NULL) {
+        *valid = 1;  // Set valid to 1 (failure)
+        return -1;   // Return an error value
+    }
+
+    *valid = 0;  // Set valid to 0 (success)
+    return elegido->data;  // Return the value of the retrieved element
+}
+*/
+
 int printElement(const int value){
 	printf("%d \n", value);
 	return 0;
@@ -603,44 +703,53 @@ void sort(node* head, char dir){
 	if(dir=='a'){ /**Ordenar acendente*/
 		for(i=0;i<1000;i++){
 			while(sort->next!=NULL){
+				// Left bigger
 				if((sort->data)>(siguiente->data)){
+					// Bigger data stored
 					respaldo=siguiente->data;
+					// Update pointers
 					siguiente->data=sort->data;
+					// Sort the biggest value on the data for the sort pointer
 					sort->data=respaldo;
-/**Se deben mover punteros para comparar los que siguen*/
+					// Update pointer to next node
 					sort=sort->next;
 					siguiente=siguiente->next;
 				}	else if((sort->data)<(siguiente->data)){
-/*Compara con el siguiente elemento,se deben mover punteros*/
+					// Sorted correctly, nothing to do
 					sort=sort->next;
 					siguiente=siguiente->next;
 				}
 			}
-/**Se colocan punteros al inicio de nuevo*/
+			// Pointers fixed 
 			sort=head;
 			siguiente=head->next;
 		}
 	}else if(dir=='d'){ /**Ordenar de manera descendente*/
 		for(i=0;i<1000;i++){
 			while(sort->next!=NULL){
+				// RIght bigger
 				if((sort->data)<(siguiente->data)){ 
+					// Bigger data stored
 					respaldo=sort->data;
+					// Update pointers
 					sort->data=siguiente->data;
+					// Sort the biggest value on the data for the sort pointer
 					siguiente->data=respaldo;
-					/**Se deben mover punteros para siguiente comparacion*/
+					// Update pointer to next node
 					sort=sort->next;
 					siguiente=siguiente->next;
 				}	else if((sort->data)>(siguiente->data)){
-					/**Se deben mover punteros igual para siguiente comparacion*/
+					// Sorted correctly, nothing to do
 					sort=sort->next;
 					siguiente=siguiente->next;
 				}
 			}
-			/**Se colocan punteros al inicio de nuevo*/
+			// Pointers fixed 
 			sort=head;
 			siguiente=head->next;
 		}
-	}else if(dir!='a' || dir!='d'){ /**No es un caracter valido, no se debe hacer nada*/
+	// Invalid character
+	}else if(dir!='a' || dir!='d'){ 
 		printf("No se digito un caracter valido, debe digitar a o d\n" );
 	}
 }
