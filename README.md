@@ -27,7 +27,8 @@ Welcome to my code portfolio! This repository showcases projects I've developed 
 - **Serial_paralel_converter** – Module for converting serial data streams into parallel outputs. Features RTL design for bit-level synchronization, DUT for functional verification, and a testbench to validate timing and data integrity.
 - **UART_Transfer** – A complete UART (Universal Asynchronous Receiver/Transmitter) implementation in Verilog. Includes RTL design for baud rate generation, start/stop bit handling, and data framing, along with a DUT and testbench for simulating full-duplex communication.
 
-### Scripting & Tooling (Python)  
+### Scripting & Tooling (Python) 
+ - **ADAS Sensor Data Processor** – Python-based tool for embedded signal processing pipeline for automotive systems. Filters sensor outliers (±3σ) and computes moving averages to smooth noisy measurements from LiDAR/RADAR systems. Demonstrates NumPy-based statistical analysis and real-time data conditioning for safety-critical applications. 
 - **Calculadora_Transformadores** – Python-based tool for calculating transformer parameters, such as turns ratio, voltage, and current. Ideal for electrical engineering applications, it provides quick and accurate computations for transformer design and analysis.  
 - **Consumo_API_ICE** – Script that interacts with the ICE (Instituto Costarricense de Electricidad) API to fetch and analyze energy consumption data. Useful for monitoring and visualizing energy usage patterns..  
 - **GDS_LOGIC_CELLS_EXTRACTER** – Python utility for extracting and analyzing logic cells from GDSII files. Designed for VLSI and digital design workflows, it aids in parsing and processing layout data for integrated circuits  
@@ -36,7 +37,7 @@ Welcome to my code portfolio! This repository showcases projects I've developed 
 - **Microcontroladores** – Dashboard for visualizing and analyzing results from microcontroller simulations and experiments. Provides an intuitive interface to display performance metrics, sensor data, and system behavior for embedded systems projects.. 
 - **Perceptron_Predictor** – Perceptron-based machine learning model for binary classification. Demonstrates training, testing, and prediction using a simple neural network..
 - **Poliformismo_Agencia_Bancaria** – project showcasing object-oriented programming (OOP) concepts, particularly polymorphism, through a simulated banking agency system. Includes classes for accounts, transactions, and customer management.
-- **Simulador_CACHE** – Models cache behavior, including hit/miss rates, replacement policies, and cache hierarchy, for educational and research purposes..    
+- **Simulador_CACHE** – Models cache behavior, including hit/miss rates, replacement policies, and cache hierarchy, for educational and research purposes.    
 
 ## How to Use This Repository  
 
