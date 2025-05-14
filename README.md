@@ -27,6 +27,29 @@ Welcome to my code portfolio! This repository showcases projects I've developed 
 - **Serial_paralel_converter** – Module for converting serial data streams into parallel outputs. Features RTL design for bit-level synchronization, DUT for functional verification, and a testbench to validate timing and data integrity.
 - **UART_Transfer** – A complete UART (Universal Asynchronous Receiver/Transmitter) implementation in Verilog. Includes RTL design for baud rate generation, start/stop bit handling, and data framing, along with a DUT and testbench for simulating full-duplex communication.
 
+
+#### UVM Verification Environments  
+- **4bits_adder**  
+  - Complete UVM testbench with:  
+    - Transaction class for operand/result modeling  
+    - Constrained-random stimulus generator  
+    - Coverage-driven verification  
+    - Scoreboard for RTL vs. reference model comparison  
+
+- **8bits_RAM**  
+  - UVM environment featuring:  
+    - Memory access transactions (read/write)  
+    - Protocol-aware driver/monitor  
+    - Data integrity checks via scoreboard  
+    - Functional coverage for address ranges  
+
+- **Combinational_adder**  
+  - UVM infrastructure including:  
+    - Parameterized transaction items  
+    - Automated regression test suite  
+    - Assertion-based protocol checking  
+
+
 ### Scripting & Tooling (Python) 
  - **ADAS Sensor Data Processor** – Python-based tool for embedded signal processing pipeline for automotive systems. Filters sensor outliers (±3σ) and computes moving averages to smooth noisy measurements from LiDAR/RADAR systems. Demonstrates NumPy-based statistical analysis and real-time data conditioning for safety-critical applications. 
 - **Calculadora_Transformadores** – Python-based tool for calculating transformer parameters, such as turns ratio, voltage, and current. Ideal for electrical engineering applications, it provides quick and accurate computations for transformer design and analysis.  
