@@ -19,7 +19,7 @@ Welcome to my code portfolio! This repository showcases projects I've developed 
 **Artimeticos_basicos** – Implementation of nested loops, arrays, and matrix manipulation to perform fundamental arithmetic operations. 
 - **Libreria_llamada_main** – Demonstrates the creation of libraries using header and implementation files, along with array generation and pointer manipulation in a main file..  
 - **Microcontroladores** – Embedded C code for real-world applications such as a washing machine controller, seismograph simulation, and tombola (bingo spinning wheel) on platforms like Arduino, STM32, and PIC microcontrollers..
-
+- **Circular Buffer Memory Manager** – C implementation of a circular (ring) buffer providing constant-time push/pop operations with wrap-around indexing for efficient embedded memory management.
   
 ### Digital Design & Hardware Acceleration (Verilog)  
 - **4bits_shiftregister** – 4-bit shift register with RTL design, DUT, and testbench. Demonstrates circular rotation (left and right) and shift operations (left and right), along with edge-triggered clocking and reset mechanisms.
