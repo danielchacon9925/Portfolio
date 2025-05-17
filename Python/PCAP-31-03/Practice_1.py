@@ -80,7 +80,7 @@ print(" @staticmethod is like a function but it lives inside the class but doesn
 # Q9: What is the result of the following dictionary comprehension ? d = (i:i+1 for i in range(5))
 print("\nQ9: What is the result of the following dictionary comprehension ? d = (i:i+1 for i in range(5))\n")
 print("R9: The result is d = (0:1,1:2,2:3,3:4)\n")
-#d = {i:i+1 for i in range(5)}
+d = {i:i+1 for i in range(5)}
 #print("d",d)
 # //___________________________________________________________________________________________________
 
@@ -191,5 +191,136 @@ numbers = [1, 2, 3, 4, 5, 6]
 def is_even(x):
     return x % 2 == 0
 
-even_numbers = list(filter(is_even, numbers))
-print(even_numbers)  # Output: [2, 4, 6]
+#even_numbers = list(filter(is_even, numbers))
+#print(even_numbers)  # Output: [2, 4, 6]
+# //___________________________________________________________________________________________________
+
+# Q21: What will be the output of print("Hello","Word")
+print("\nQ21: What will be the output of print(Hello,Word)")
+print("\nR21: Hello Word")
+# //___________________________________________________________________________________________________
+
+# Q22: What happens if there is no matching except block for an exception raised in the try block
+print("\nQ22: What happens if there is no matching except block for an exception raised in the try block")
+print("\nR22: The exception is propagated to higher levels")
+print("\n____EXPLANATION BELLOW____\n")
+print(" If not matching except block is found, the exception is propagated up the call stack\n")
+# //___________________________________________________________________________________________________
+
+# Q23: What is the output of the following code? def factorial(n): return 1 if n == 0 else n*factorial(n-1); print(factorial(4))
+print("\nQ23: What is the output of the following code? def factorial(n): return 1 if n == 0 else n*factorial(n-1); print(factorial(4))")
+print("\nR23: Its a recursive function. Factorial 4= 4*3*2*1")
+# //___________________________________________________________________________________________________
+
+# Q24: Which function from the sys module is used to get command line arguments passed to a python script
+print("\nQ24: Which function from the sys module is used to get command line arguments passed to a python script")
+print("\nR24: sys.arg")
+print("\n____EXPLANATION BELLOW____\n")
+print(" sys is a list provided by sys module that contains the command-line arguments\n")
+# //___________________________________________________________________________________________________
+
+# Q25: How many arguments __init__ method receive by default?
+print("\nQ25: How many arguments __init__ method receive by default?")
+print("\nR25: Default receives only 1: selft which is the instance of the class")
+# //___________________________________________________________________________________________________
+
+# Q26: What is the correct way to terminate a while loop early
+print("\nQ26: What is the correct way to terminate a while loop early")
+print("\nR26: Using th command: break")
+# //___________________________________________________________________________________________________
+
+# Q27: What is the purpose of using lambda functions?
+print("\nQ27: What is the purpose of using lambda functions?")
+print("\nR27: to define anonymous function that can be used inline")
+# //___________________________________________________________________________________________________
+
+# Q28: Which mode allows you to both read and write a file?
+print("\nQ28: Which mode allows you to both read and write a file?")
+print("\nR28: The command should be a with open(txt,r+) as file:. If file doesnt exist, raises FileNotFoundError")
+# //___________________________________________________________________________________________________
+
+# Q29: What is the correct syntax for an if statement in python?
+print("\nQ29: What is the correct syntax for an if statement in python?")
+print("\nR29: if: statement else: statemetn")
+# //___________________________________________________________________________________________________
+
+# Q30: What does the StopIteration exception indicate in the context of iterators and generators
+print("\nQ30: What does the StopIteration exception indicate in the context of iterators and generators")
+print("\nR30: The iterator has reached the end of the sequence")
+print("\n____EXPLANATION BELLOW____\n")
+print(" The iterator or generator has no more items to return\n")
+my_list = [1,2,3]
+# Iter() build in function that creates an iterator for an iterable
+# my_list = is an iterator object. remembers current position and gives the next when asked
+my_list = iter(my_list)
+# next() retrive the next item from the iterator
+
+#print(next(my_list))
+#print(next(my_list))
+#print(next(my_list))
+#print(next(my_list)) # StopIteration
+# //___________________________________________________________________________________________________
+
+# Q31: How can you define a function that takes a variable number of arguments
+print("\nQ31: How can ou define a function that takes a variable number of arguments")
+print("\nR31: Use def funct(*arg), *arg indicates any number of positional arguments")
+print("\n____EXPLANATION BELLOW____\n")
+print(" Take a look at the code. greet_all(*names)\n")
+def greet_all(*names):
+    for name in names:
+        print(f"Hola, {name}!")
+#greet_all("Luis","Pedro","Carlos")
+# //___________________________________________________________________________________________________
+
+# Q32: What is the purpose of the self keyword in a class
+print("\nQ32: What is the purpose of the self keyword in a class")
+print("\nR32: To refer to current object")
+# //___________________________________________________________________________________________________
+
+# Q33: Can an instance method access both instance and class attributes?
+print("\nQ33: Can an instance method access both instance and class attributes?")
+print("\nR33: YEs, it can access to both.")
+# //___________________________________________________________________________________________________
+
+# Q34: What is the result of str(10.5) + "is a float"
+print("\nQ34: What is the result of str(10.5) + is a float")
+print("\nR34: 10.5 is a float")
+# //___________________________________________________________________________________________________
+
+# Q35: What is the result of of using a single underscore(_) before an attribute in python
+print("\nQ35: What is the result of of using a single underscore(_) before an attribute in python")
+print("\nR35: The attribute is considered protected and intended for internal use")
+print("\n____EXPLANATION BELLOW____\n")
+print(" Its considered an atribute to treat private for internal use only\n")
+print(" Take a look at code to see an example\n")
+class person:
+    def __init__(self,name):
+        self.name=name
+        self._secret="For private and internal use"
+
+# Q36: How does Python's garbage collector identify objects that need to be destroyed?
+print("\nQ36: How does Python's garbage collector identify objects that need to be destroyed?")
+print("\nR36: By tracking the reference count of the object")
+# //___________________________________________________________________________________________________
+
+# Q37: How can you ensure that an external file is closed after reading in Python
+print("\nQ37: How can you ensure that an external file is closed after reading in Python")
+print("\nR37: Using open() as file")
+print("\n____EXPLANATION BELLOW____\n")
+print(" Using with open() as file: we ensure automatically closing of the file even if an exception is raised\n")
+# //___________________________________________________________________________________________________
+
+# Q38: What happens when an object is no longer referenced in python?
+print("\nQ38: What happens when an object is no longer referenced in python?")
+print("\nR38: The object is marked for garbage collection")
+# //___________________________________________________________________________________________________
+
+# Q39: What will be the outcome of opening a file using open("file.txt","a"))
+print("\nQ39: What will be the outcome of opening a file using open(file.txt,a))")
+print("\nR39: It will append the data to the end of the file")
+# //___________________________________________________________________________________________________
+
+# Q40: What is the output of the following code: i in "abcde":print(i.upper())
+print("\nQ40: What is the output of the following code: i in abcde:print(i.upper())")
+print("\nR40: A B C D E")
+#for i in "abcde": print(i.upper())
