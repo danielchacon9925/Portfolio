@@ -324,3 +324,6 @@ print("\nR39: It will append the data to the end of the file")
 print("\nQ40: What is the output of the following code: i in abcde:print(i.upper())")
 print("\nR40: A B C D E")
 #for i in "abcde": print(i.upper())
+
+import keyword
+print(keyword.iskeyword("try"))
