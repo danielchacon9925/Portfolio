@@ -29,3 +29,15 @@ This type of project is useful for:
 - **Combining Conditions**: Using logical operators (AND) to refine queries.
 
 - **Practical Application**: Solving real-world questions on customers, transactions, and films.
+
+---
+
+## How to Run
+
+- 1. Load the database into PostgreSQL.
+
+- 2. Open your SQL client or command-line tool.
+
+- 3. Copy and paste the queries to execute them.
+
+- 4. Review the results to analyze customer, transaction, and film insights.
