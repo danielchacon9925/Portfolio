@@ -10,8 +10,8 @@ The goal of this challenge is to apply SQL fundamentals to answer practical busi
 By querying tables such as **payment**, **actor**, **address**, and **film**, we can extract meaningful insights related to transactions, customers, and movie details.
 
 This type of project is useful for:
-- Practicing SQL for interviews and assessments  
-- Building confidence in database querying  
+- Practicing SQL for assessments  
+- Database querying  
 - Understanding how to retrieve and analyze relational data  
 
 ---
