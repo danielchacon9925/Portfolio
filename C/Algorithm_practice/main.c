@@ -47,7 +47,7 @@ int main(){
     ///////////////////////
     // 5. PUSH BACK TEST //
     ///////////////////////
-    printf("----4. PUSH BACK TO LINKED LIST----\n");
+    printf("----5. PUSH BACK TO LINKED LIST----\n");
     int cont_2 = 71;
     int valor_PUSH_BACK;
     while(cont_2 < 81){
@@ -55,5 +55,19 @@ int main(){
         cont_2++;
     }
     PRINT_LIST(LIST_CREATED); 
+    //___________________________________
+    ///////////////////////
+    // 6. POP FRONT TEST //
+    ///////////////////////
+    printf("----6. POP FRONT TO LINKED LIST----\n");
+    int POP_FRONT_VALUE=POP_FRONT(&LIST_CREATED);
+    PRINT_LIST(LIST_CREATED);
+    //___________________________________
+    //////////////////////
+    // 6. POP BACK TEST //
+    //////////////////////
+    printf("----7. POP BACK TO LINKED LIST----\n");
+    int POP_BACK_VALUE=POP_BACK(&LIST_CREATED);
+    PRINT_LIST(LIST_CREATED);
     return (0);
 }

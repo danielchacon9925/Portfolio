@@ -186,8 +186,68 @@ int PUSH_BACK(node* head, int NEW_VALUE){
     // Return 0 for success
     return (0);
 }
-
-
+//____________________________________
+///////////////////////
+// 3. POP FRONT/BACK //
+///////////////////////
+int POP_FRONT(node** head){
+    // Error handling
+    if (*head == NULL){
+        printf("ERROR POP FRONT: Unable to POP FRONT node. Empty list");
+        return(-1);
+    }
+    // Pointer to POP node
+    node *POP_ADDRESS=*head; 
+    // Capture value to POP
+    int value_POP=POP_ADDRESS->data;
+    // Update head pointer
+    *head=POP_ADDRESS->next; 
+    // FREE memory for POP node
+    free(POP_ADDRESS);
+    // Return POP VALUE
+    return(value_POP);
+}
+//____________________________________
+int POP_BACK(node** head){
+    // Error handling
+    if (*head == NULL){
+        printf("ERROR POP FRONT: Unable to POP FRONT node. Empty list");
+        return(-1);
+    }
+    ////////////////////////
+    // 1. Single node list//
+    ////////////////////////
+    if((*head)->next==NULL){
+        // Capture value
+        int value_POP = (*head)->data;
+        // FREE memory for POP node
+        free(*head);
+        // Update head pointer
+        *head = NULL; 
+        // Return POP value
+        return(value_POP); 
+    }
+    //////////////////////////
+    // 2. More than one node//
+    //////////////////////////
+    // Temporal pointer to traverse linked list second to last
+    node* current = *head;
+    while (current->next->next!=NULL)
+    {
+        // Update pointer 
+        current = current->next;
+    }
+    // Current is the second-to-last- last_node is the one to be removed
+    node* last_node = current->next;
+    // Store the value of last node
+    int value_POP = last_node->data;
+    //Update the list
+    current->next=NULL;
+    // FREE memory for POP node
+    free(last_node);
+    // Return POP VALUE
+    return(value_POP);
+}
 
 
 

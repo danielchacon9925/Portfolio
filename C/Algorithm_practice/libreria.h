@@ -55,7 +55,7 @@ int PUSH_BACK(node* head, int NEW_VALUE);
 int POP_FRONT(node** head);
 
 // BACK //
-int POP_BACK(node* head);
+int POP_BACK(node** head);
 
 /////////////////////////////////
 // 4. INSERT/REMOVE by position//
