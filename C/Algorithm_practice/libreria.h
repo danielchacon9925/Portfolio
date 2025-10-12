@@ -102,5 +102,11 @@ void PRINT_LIST(node* head);
 // Free memory
 int CLEAN_LIST(node* head);
 
+////////////////////
+// 10. COUNT NODES//
+////////////////////
+
+// How many node are on a linked list
+int COUNT_NODES(node* head);
 
 #endif

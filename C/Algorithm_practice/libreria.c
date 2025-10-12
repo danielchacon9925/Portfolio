@@ -248,10 +248,130 @@ int POP_BACK(node** head){
     // Return POP VALUE
     return(value_POP);
 }
+//____________________________________
+/////////////////////////////////
+// 4. INSERT/REMOVE by position//
+/////////////////////////////////
+int INSERT_ELEMENT(node** head, int POSITION, int NEW_VALUE){
+    ////////////////////
+    // CHECH POSITION //
+    ////////////////////
+    // FRONT
+    if (POSITION == 0){
+        int NEW_NODE_PUSH_FRONT = PUSH_FRONT(head, NEW_VALUE);
+    }
+    //////////////////////////
+    // Fields initialization//
+    //////////////////////////
+    // New node
+    node *NEW_NODE = malloc(sizeof(node));
+    // Error handling
+    if(NEW_NODE == NULL){
+        printf("ERROR: Unable to allocate new node");
+        return 1;
+    }
+    // Capture value into data
+    NEW_NODE->data=NEW_VALUE;
+    ///////////////////////
+    // Traverse link list//
+    ///////////////////////
+    // Pointer to traverse link
+    node *current = (*head);
+    // Counter to traverse link
+    int i;
+    // Traverse the list
+    for (i = 0; i<(POSITION-1);i++){
+        // CHECK POSITION: Ensure we havent reach end of the list
+        if(current == NULL){
+            // FREE allocated memory
+            free(NEW_NODE);
+            return 1;
+        }
+        // Point to next node
+        current = current->next;
+    }
+    // CHECK CURRENT POSITION
+    if(current == NULL){
+        // FREE allocated memory
+        free(NEW_NODE);
+        return 1;
+    }
+    ///////////////////
+    // NODE INSERTION//
+    ///////////////////
+    // Perform insertion: New node points to the node after current node
+    NEW_NODE->next=current->next;
+    // Update current: Points to the new node
+    current->next=NEW_NODE;
+
+    return 0;
+}
+//____________________________________
+int REMOVE_ELEMENT(node** head, int POSITION){
+    // ERROR HANDLING
+    if (*head == NULL) {
+        printf("ERROR: Unable to remove element in an empty list");
+        return -1;  // Return -1 if the list is empty
+    }
+    ////////////////////////
+    // REMOVAL AT BEGINING//
+    ////////////////////////
+    if (POSITION == 0) {
+        int POP_FRONT_VALUE=POP_FRONT(head);
+        printf("The value POP FRONT is %d\n",POP_FRONT_VALUE);
+        return 0;
+    }
+    ///////////////////////
+    // Traverse link list//
+    ///////////////////////
+    // Pointer to hold head pointer 
+    node* current = *head;
+    // Traverse the list
+    for (int i = 0; i < POSITION - 1; i++) {
+        if (current->next == NULL) {
+            return -1;  // Return -1 if the position is invalid
+        }
+        current = current->next;
+    }
+    /////////////////
+    // NODE REMOVAL//
+    /////////////////
+    // Pointer to the next node to free
+    node* NODE_TO_FREE = current->next;  // Node to be freed
+    // ERROR HANDLING
+    if (NODE_TO_FREE == NULL) {
+        return -1;  // Return -1 if the position is invalid
+    }
+    // Capture value to free
+    int VALUE_TO_FREE = NODE_TO_FREE->data;  
+    // Update current: Points to the node next to the node to be free
+    current->next = NODE_TO_FREE->next;  
+    free(NODE_TO_FREE);  // Free the memory of the removed node
+
+    return VALUE_TO_FREE;  // Return the value of the removed node
+}
 
 
-
-
+////////////////////
+// 10. COUNT NODES//
+////////////////////
+int COUNT_NODES(node *head) {
+    // Counter for the number of nodes
+    int count = 0;
+    // Pointer to hold head pointer position
+    node *current = head;
+    ///////////////////////
+    // Traverse link list//
+    ///////////////////////
+    while (current != NULL) {
+        // Increment the count for the current node
+        count++;
+        // Update current pointer: Move to the next node in the sequence
+        current = current->next;
+    }
+    // Return count
+    return count;
+}
 //////////////////
 // 2. Print list//
 //////////////////
