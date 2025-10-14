@@ -259,6 +259,7 @@ int INSERT_ELEMENT(node** head, int POSITION, int NEW_VALUE){
     // FRONT
     if (POSITION == 0){
         int NEW_NODE_PUSH_FRONT = PUSH_FRONT(head, NEW_VALUE);
+        return 0;
     }
     //////////////////////////
     // Fields initialization//
@@ -350,10 +351,180 @@ int REMOVE_ELEMENT(node** head, int POSITION){
 
     return VALUE_TO_FREE;  // Return the value of the removed node
 }
+//____________________________________
+///////////////////////////////
+// 5. GET ELEMENT by position//
+///////////////////////////////
+int GET_ELEMENT(node* head, int POSITION, int valid){
+    // ERROR HANDLING: Empty list
+    if(head == NULL){
+        printf("ERROR: Empty list");
+        // Set value to failure
+        valid = 1;
+        return -1;
+    }
+    ///////////////////
+    // GETTING VALUES//
+    ///////////////////
+    // Retrieval at initial position
+    if (POSITION == 0){
+        // Set value to valid
+        valid = 0;
+        // Retrieve value
+        return head->data;
+    }
+    // Traverse the linked list
+    // Pointer to traverse list
+    node* current = head; 
+    for (int i = 0; i < POSITION; i++){
+        //printf("The value on i is %d\n",i);
+        // ERROR HANDLING: Empty list
+        if(current->next == NULL){
+            printf("ERROR: POSITION DOESNT EXIST\n");
+            // Set value to failure
+            valid = 1;
+            return -1;
+        }
+        current = current->next;
+    }
+    //printf("SALE DEL LOOP\n");
+    // Set value to valid
+    valid = 0;
+    // Return value
+    printf("The value in position %d is %d\n",POSITION,current->data);
+    return current->data;
+}
+//____________________________________
+//////////////////////
+// 6. SORT POSITION//
+/////////////////////
+void SORT(node* head, char DIRECTION){
+    // Pointer for sorted list
+    node* SORT = head;
+    // Pointer for the next node
+    node* NEXT_NODE = head->next;
+    // Counter
+    int i;
+    ///////////////////////////////
+    // Count nodes in linked list//
+    ///////////////////////////////
+    int NODE_COUNT = COUNT_NODES(head);
+    printf("NODE COUNT %d\n", NODE_COUNT);
+    // Temporary variable to hold value
+    int BACK_UP; 
+    /////////
+    // SORT//
+    //////////////
+    // ASCENDING
+    if (DIRECTION == 'a' || DIRECTION == 'A'){
+        printf("Sorting Ascending\n");
+        for (i=0;i<NODE_COUNT;i++){
+            
+            while (SORT->next != NULL)
+            {   /*LEFT BIGGER*/
+                if ((SORT->data)>(NEXT_NODE->data)){
+                    // HOLD LOWER VALUE
+                    BACK_UP = NEXT_NODE->data;
+                    // BALANCE NODES
+                    NEXT_NODE->data = SORT->data;
+                    // REPLACE LOWER VALUE TO LEFT
+                    SORT->data = BACK_UP;
+                    // UPDATE POINTERS
+                    SORT = SORT->next;
+                    NEXT_NODE = NEXT_NODE->next;
+
+                } else if ((SORT->data)<(NEXT_NODE->data)){
+                    // Sorted correctly
+                    // UPDATE POINTERS
+                    SORT = SORT->next;
+                    NEXT_NODE = NEXT_NODE->next;
+                }
+            }
+            // Secure pointer
+            SORT = head;
+            NEXT_NODE = head->next;
+
+        }
+
+    } else if (DIRECTION == 'd' || DIRECTION == 'D'){
+        printf("Sorting Descending\n");
+        for (i=0;i<NODE_COUNT;i++){
+            while (SORT->next != NULL)
+            {   /*LEFT BIGGER*/
+                if ((SORT->data)>(NEXT_NODE->data)){
+                    // Sorted correctly
+                    // UPDATE POINTERS
+                    SORT = SORT->next;
+                    NEXT_NODE = NEXT_NODE->next;
+                } else if ((SORT->data)<(NEXT_NODE->data)){
+                    // HOLD HIGHEST VALUE
+                    BACK_UP = NEXT_NODE->data;
+                    // BALANCE NODES
+                    NEXT_NODE->data = SORT->data;
+                    // REPLACE LOWER VALUE TO RIGHT
+                    SORT->data = BACK_UP;
+                    // UPDATE POINTERS
+                    SORT = SORT->next;
+                    NEXT_NODE = NEXT_NODE->next;
+                }
+            }
+            // Secure pointer
+            SORT = head;
+            NEXT_NODE = head->next;
+
+        }
+    } else {
+        printf("INVALID CHARACTER. Ascending: A, Descending: D");
+    }
 
 
+}
+//____________________________________
+//////////////////
+// 7. Print list//
+//////////////////
+void PRINT_LIST(node* head){
+    // Pointer to store original head address
+    node *VALUE_TO_PRINT = head;
+
+    // Print every element until find NULL
+    while (VALUE_TO_PRINT != NULL){
+        // Point to data space
+        printf("%d\n", VALUE_TO_PRINT->data);
+        // Update pointer to next node
+        VALUE_TO_PRINT = VALUE_TO_PRINT->next; 
+    }
+    printf("\n"); 
+}
+//____________________________________
+/////////////////
+// 8. FREE LIST//
+/////////////////
+// Change function signature to accept a pointer to the head pointer
+int CLEAN_LIST(node** head) {
+    // Pointers to traverse and free nodes
+    node* current = *head;
+    node* next_node = NULL;
+    // Error handling: Check if the list is already empty
+    if (current == NULL) {
+        printf("Empty list (Already Clean)\n");
+        return 0; 
+    }
+    while (current != NULL) {
+        // Current points to the next node before free current
+        next_node = current->next;
+        // FREE NODE 
+        free(current);
+        // Move to next node
+        current = next_node;
+    }
+    // Set original pointer to null
+    *head = NULL;
+    printf("CLEAN LIST \n");
+    return 0; 
+} 
 ////////////////////
-// 10. COUNT NODES//
+// 9. COUNT NODES//
 ////////////////////
 int COUNT_NODES(node *head) {
     // Counter for the number of nodes
@@ -372,19 +543,14 @@ int COUNT_NODES(node *head) {
     // Return count
     return count;
 }
-//////////////////
-// 2. Print list//
-//////////////////
-void PRINT_LIST(node* head){
-    // Pointer to store original head address
-    node *VALUE_TO_PRINT = head;
 
-    // Print every element until find NULL
-    while (VALUE_TO_PRINT != NULL){
-        // Point to data space
-        printf("%d\n", VALUE_TO_PRINT->data);
-        // Update pointer to next node
-        VALUE_TO_PRINT = VALUE_TO_PRINT->next; 
+
+void print_debug(node* head) {
+    node* current = head;
+    int index = 0;
+    while (current != NULL) {
+        printf("[%d] data = %d, next = %p\n", index, current->data, (void*)current->next);
+        current = current->next;
+        index++;
     }
-    printf("\n"); 
 }

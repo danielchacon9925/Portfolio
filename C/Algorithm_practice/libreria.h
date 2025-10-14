@@ -72,7 +72,7 @@ int REMOVE_ELEMENT(node** head, int POSITION);
 ///////////////////////////////
 
 // Return de value at specific position
-int GET_ELEMENT(node* head, int POSITION, int* valid);
+int GET_ELEMENT(node* head, int POSITION, int valid);
 
 //////////////////////
 // 6. SORT POSITION//
@@ -81,32 +81,28 @@ int GET_ELEMENT(node* head, int POSITION, int* valid);
 // Sort list
 void SORT(node* head, char DIRECTION);
 
-/////////////////////
-// 7. PRINT ELEMENT//
-/////////////////////
-
-// Print value and space line
-int PRINT_ELEMENT(const int value);
-
 //////////////////
-// 8. PRINT LIST//
+// 7. PRINT LIST//
 //////////////////
 
 // Print all the list
 void PRINT_LIST(node* head);
 
 //////////////////
-// 9. CLEAN LIST//
+// 8. CLEAN LIST//
 //////////////////
 
 // Free memory
-int CLEAN_LIST(node* head);
+int CLEAN_LIST(node** head);
 
-////////////////////
-// 10. COUNT NODES//
-////////////////////
+//////////////////
+// 9. COUNT NODES//
+///////////////////
 
 // How many node are on a linked list
 int COUNT_NODES(node* head);
+
+
+void print_debug(node* head);
 
 #endif
