@@ -523,6 +523,7 @@ int CLEAN_LIST(node** head) {
     printf("CLEAN LIST \n");
     return 0; 
 } 
+//____________________________________
 ////////////////////
 // 9. COUNT NODES//
 ////////////////////
@@ -543,7 +544,80 @@ int COUNT_NODES(node *head) {
     // Return count
     return count;
 }
+//____________________________________
+//////////////////////////////
+// 10. Create a W x Y Matrix//
+//////////////////////////////
+int** CREATE_MATRIX(int w, int y){
+    // Check valid size
+    if ( w <= 0 || y <= 0 ){
+        printf("Dimensions are not valid");
+        return NULL;
+    }
+    //////////////////////////////
+    // Allocate rows and columns//
+    //////////////////////////////
+    // ALLOCATE ROWS
+    // int**: Pointer to an array of int* pointers 
+    // Calculate number of bytes needed to store an array of W pointers. 
+    int** matrix = (int**)malloc( w * sizeof(int *));
+    // Error handling
+    if (matrix == NULL){
+        printf("Fail to allocate memory for rows pointers");
+        return NULL;
+    }
+    // ALLOCATE COLUMNS for each row
+    for (int i=0; i<w; i++){
+        // Allocate columns for each row and use only 0's
+        matrix[i]=(int *)calloc(y, sizeof(int));
+        // Error handling
+        if (matrix[i] == NULL){
+            printf("Fail to allocate memory for rows");
+            // CLEAN UP allocated rows before returning NULL
+            for (int j = 0; j < i; j++) {
+                free(matrix[j]);
+            }
+            // Clean array of pointers
+            free(matrix);
+            return NULL;
+        }
+    }
+    return matrix;
+}
+//____________________________________
+///////////////////////////
+// 11. Print W x Y Matrix//
+///////////////////////////
+void PRINT_MATRIX(int** matrix, int w, int y) {
+    if (matrix == NULL) {
+        printf("Matrix is NULL.\n");
+    }
+    for (int i = 0; i < w; i++) {
+        for (int j = 0; j < y; j++) {
+            printf("%4d", matrix[i][j]);
+        }
+        printf("\n");
+    }
+}
+//____________________________________
+/////////////////////
+// 12. CLEAN Matrix//
+/////////////////////
+int CLEAN_MATRIX(int **matrix, int w) {
+    if (matrix == NULL) {
+        return 0; // Nothing to free
+    }
+    
+    // Free the memory for the columns (each row data array)
+    for (int i = 0; i < w; i++) {
+        free(matrix[i]);
+    }
+    
+    // Free the memory for the array of row pointers
+    free(matrix);
 
+    return 0;
+}
 
 void print_debug(node* head) {
     node* current = head;

@@ -95,13 +95,29 @@ void PRINT_LIST(node* head);
 // Free memory
 int CLEAN_LIST(node** head);
 
-//////////////////
+///////////////////
 // 9. COUNT NODES//
 ///////////////////
 
 // How many node are on a linked list
 int COUNT_NODES(node* head);
 
+//////////////////////////////
+// 10. Create a W x Y Matrix//
+//////////////////////////////
+
+int** CREATE_MATRIX(int w, int y);
+
+///////////////////////////
+// 11. Print W x Y Matrix//
+///////////////////////////
+void PRINT_MATRIX(int** matrix, int w, int y);
+
+/////////////////////
+// 12. CLEAN Matrix//
+/////////////////////
+
+int CLEAN_MATRIX(int **matrix, int w);
 
 void print_debug(node* head);
 

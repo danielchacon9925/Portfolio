@@ -129,11 +129,21 @@ int main(){
     SORT(LIST_CREATED,'A');
     PRINT_LIST(LIST_CREATED);
     //___________________________________
+    //////////////////////////////
+    // 10. Create a W x Y Matrix//
+    //////////////////////////////
+    int w = 4;
+    int y = 6;
+    int** MATRIX = CREATE_MATRIX(w,y);
+    printf("The matrix is: \n");
+    PRINT_MATRIX(MATRIX, w, y);
+    printf("Insert the element(7) in W = 2, Y = 4\n");
+    MATRIX[2][4] = 7; 
+    PRINT_MATRIX(MATRIX, w, y);
+    //___________________________________
     ///////////////////
     // 12. CLEAN LIST//
     ///////////////////
-    printf("\nLIST BEFORE CLEAN\n");
-    PRINT_LIST(LIST_CREATED);
     int FREE_LIST = CLEAN_LIST(&LIST_CREATED);
     if (FREE_LIST == 1){
         printf("The list have NOT been cleaned by the function CLEAN_LIST\n");
@@ -143,5 +153,19 @@ int main(){
     int COUNT_2 = COUNT_NODES(LIST_CREATED);
     printf("The node count is %d\n", COUNT_2);
     PRINT_LIST(LIST_CREATED);
+    //___________________________________
+    /////////////////////
+    // 13. CLEAN MATRIX//
+    /////////////////////
+    int FREE_MATRIX = CLEAN_MATRIX(MATRIX,w);
+    if (FREE_MATRIX == 1){
+        printf("The list have NOT been cleaned by the function CLEAN_MATRIX\n");
+    } else {
+        printf("The list have  been cleaned by the function CLEAN_MATRIX\n");
+    }
+    
     return (0);
 }
+
+
+
