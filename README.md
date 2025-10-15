@@ -20,6 +20,8 @@ Welcome to my code portfolio! This repository showcases projects I've developed 
 - **Libreria_llamada_main** – Demonstrates the creation of libraries using header and implementation files, along with array generation and pointer manipulation in a main file..  
 - **Microcontroladores** – Embedded C code for real-world applications such as a washing machine controller, seismograph simulation, and tombola (bingo spinning wheel) on platforms like Arduino, STM32, and PIC microcontrollers..
 - **Circular Buffer Memory Manager** – C implementation of a circular (ring) buffer providing constant-time push/pop operations with wrap-around indexing for efficient embedded memory management.
+- **Algorithm_practice** – This C implementation file provides a comprehensive set of functions for managing two distinct data structures: a singly linked list and a dynamically allocated 2D matrix. For the linked list, it includes full CRUD (Create, Read, Update, Delete) functionality with methods like Notes, READ_LIST/WRITE_LIST (file I/O), PUSH_FRONT/PUSH_BACK, POP_FRONT/POP_BACK, INSERT_ELEMENT, REMOVE_ELEMENT, GET_ELEMENT, and list traversal utilities like COUNT_NODES, PRINT_LIST, and a bubble-sort-based SORT. Separately, it includes functions for matrix management, namely CREATE_MATRIX (using calloc for initialization), PRINT_MATRIX, and CLEAN_MATRIX (for memory deallocation), demonstrating best practices for dynamic memory handling with double pointers.
+
   
 ### Digital Design & Hardware Acceleration (Verilog)  
 - **4bits_shiftregister** – 4-bit shift register with RTL design, DUT, and testbench. Demonstrates circular rotation (left and right) and shift operations (left and right), along with edge-triggered clocking and reset mechanisms.
