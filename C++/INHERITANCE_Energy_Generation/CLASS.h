@@ -5,14 +5,14 @@
 #include <list>
 #include <string>
 #include <stdio.h>
-#include <list>
+#include <iostream>
+
 
 using namespace std;
 
 //=============
 // BASE CLASS =
 //=============
-
 class GENERATOR_SOURCE{
     protected:
         string _UBICATION;
@@ -51,13 +51,57 @@ class GENERATOR_SOURCE{
             //====================
             // Name
             string GET_NAME_GENERATOR() const;
-            void SET_NAME_GENERATOR(const string& NAME_GENERATOR) const;
+            void SET_NAME_GENERATOR(const string& NAME_GENERATOR);
             // POWER
             void SET_PLATE_POWER(const string& PLATE_POWER);
             string GET_PLATE_POWER() const;
             // Show information
             void PRINT_INFO();   
     };//___________________________________________
-
+//__________________________________________________________________________________________
+//=============
+// BASE CLASS =
+//=============
+class GENERATOR_PLANT{
+    private:
+        string _NAME_GENERATOR_PLANT;
+        string _UBICATION_PLANT;
+        list <GENERATION_UNIT*>_GENERATOR_UNITS;
+    public:
+            //===========================
+            // Constructor & Destructor =
+            //===========================
+            GENERATOR_PLANT(string UBICATION_PLANT);
+            virtual ~GENERATOR_PLANT();
+            //====================
+            // Getters & Setters =
+            //====================
+            // Name
+            string GET_NAME_GENERATION_PLANT() const;
+            void SET_NAME_GENERATION_PLANT(const string& NAME_GENERATION_PLANT);  
+            // Location
+            string GET_LOCATION_PLANT()const;
+            void SET_LOCATION_PLANT(const string& UBICATION_PLANT);     
+            // Add UNIT
+            void ADD_GENERATION_UNIT(GENERATION_UNIT* UNIT);
+            // Show information
+            void PRINT_INFO();            
+};
+//__________________________________________________________________________________________
+//=============
+// BASE CLASS =
+//=============
+class ELECTRICAL_SYSTEM{
+    private:
+        list <GENERATOR_PLANT*> _GENERATION_PLANTS;
+    public:
+        //===========================
+        // Constructor & Destructor =
+        //===========================
+        ELECTRICAL_SYSTEM(list <GENERATOR_PLANT*> GENERATION_PLANTS);
+        virtual ~ELECTRICAL_SYSTEM();
+        // Show information
+        void PRINT_INFO();   
+    };
 
 #endif
