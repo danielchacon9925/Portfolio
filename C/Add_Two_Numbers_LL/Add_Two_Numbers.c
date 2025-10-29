@@ -64,12 +64,12 @@ node* RANDOM_LIST(int SIZE){
     // Return pointer to head of list
     return head;
 }
-
+//____________________________
 //=============
 // Count nodes=
 //=============
 int COUNT_NODES(node *head){
-    // Counter
+    // Counter 
     int count = 0;
     // Pointer to hold head pointer 
     node *current = head; 
@@ -118,18 +118,22 @@ node* addTwoNumbers(node* L1, node* L2) {
     printf("Node count L1 %d\n",L1_COUNT);
     printf("Node count L2 %d\n",L2_COUNT);
     printf("SIZE_TO_ALLOC %d\n",SIZE_TO_ALLOC);
-    //===================
-    // MEMORY ALLOCATION=
-    //===================
+    //======================
+    // FIELD INITIALIZATION=
+    //======================
     // SUM RESULT
     node *SUM_RESULT = (node *)malloc(sizeof(node));
+    // Error handling
+    if (SUM_RESULT == NULL){
+        printf("Unable to allocate memory");
+        return NULL;
+    }
     SUM_RESULT->data = 0;
     SUM_RESULT->next = NULL;
     // Pointer to traverse the list
     node *current = SUM_RESULT;
     // Carry
     int carry = 0;
-
     ///////////////////
     // Node creations//
     ///////////////////
@@ -157,6 +161,11 @@ node* addTwoNumbers(node* L1, node* L2) {
         // Fields initialization//
         //////////////////////////       
         node *NEW_NODE= (node *)malloc(sizeof(node));
+        // Error handling
+        if (NEW_NODE == NULL){
+            printf("Unable to allocate memory");
+            return NULL;
+        }
         // Data initialization
         NEW_NODE->data = digit;
         NEW_NODE->next = NULL;
@@ -181,10 +190,13 @@ node* addTwoNumbers(node* L1, node* L2) {
         //printf("Salió de loop en if\n");
 
     }
-    printf("Salio del loop\n");
     // To avoid return the head (has a 0)
     return SUM_RESULT->next;
 }
+//____________________________
+//============
+// PRINT LIST=
+//============
 void PRINT_LIST(node* head){
     // Pointer to store original head address
     node *VALUE_TO_PRINT = head;
@@ -198,6 +210,25 @@ void PRINT_LIST(node* head){
     }
     printf("\n"); 
 }
+//____________________________
+//===========
+// FREE_LIST=
+//===========
+void FREE_LIST(node *head){
+    // Pointer to traverse the list
+    node *current = head;
+    // Temporary variable to save next node
+    node *next_node;
+    while(current != NULL){
+        // Pointer pointing to next node
+        next_node = current->next;
+        // Free current node
+        free(current);
+        // Update current to next node
+        current = next_node; 
+    }
+}
+
 
 int main(){
 
@@ -222,7 +253,10 @@ int main(){
 
     node *PROTO_FUN = addTwoNumbers(LIST_CREATED_L1,LIST_CREATED_L2);
 
-    PRINT_LIST(PROTO_FUN);    
+    PRINT_LIST(PROTO_FUN);  
+    FREE_LIST(LIST_CREATED_L1);
+    FREE_LIST(LIST_CREATED_L2);
+    FREE_LIST(PROTO_FUN);
 
 
 }
