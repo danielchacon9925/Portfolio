@@ -1,0 +1,4 @@
+/home/nephilim/Coding_portfolio/C++/BitStream_Implementation/BASE_FILES/build/CMakeFiles/bit_stream_test.dir
+/home/nephilim/Coding_portfolio/C++/BitStream_Implementation/BASE_FILES/build/CMakeFiles/test.dir
+/home/nephilim/Coding_portfolio/C++/BitStream_Implementation/BASE_FILES/build/CMakeFiles/edit_cache.dir
+/home/nephilim/Coding_portfolio/C++/BitStream_Implementation/BASE_FILES/build/CMakeFiles/rebuild_cache.dir

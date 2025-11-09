@@ -1,0 +1,5 @@
+if(EXISTS "/home/nephilim/Coding_portfolio/C++/BitStream_Implementation/BASE_FILES/build/bit_stream_test[1]_tests.cmake")
+  include("/home/nephilim/Coding_portfolio/C++/BitStream_Implementation/BASE_FILES/build/bit_stream_test[1]_tests.cmake")
+else()
+  add_test(bit_stream_test_NOT_BUILT bit_stream_test_NOT_BUILT)
+endif()

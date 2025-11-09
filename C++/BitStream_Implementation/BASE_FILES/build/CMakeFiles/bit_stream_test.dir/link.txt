@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/bit_stream_test.dir/test.cpp.o -o bit_stream_test  /usr/lib/libgtest_main.a /usr/lib/libgtest.a -lpthread 
