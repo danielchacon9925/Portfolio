@@ -1,25 +1,15 @@
-//-------------------------------------------------------------
-// Copyright (c) 2011 Matthews Swedot AB.  All rights reserved.
-//-------------------------------------------------------------
-/// @file bit_stream.hpp
 
 #pragma once
 
 #include <atomic>
 #include <stdint.h>
 #include <memory>
-#include <thread>
-#include <vector>
 #include <iostream>
 #include <algorithm>
-#include <cmath>
+
 
 // Using targeted declarations to avoid namespace pollution
 using std::atomic;
-using std::min;
-using std::cout;
-using std::endl;
-
 
 //========
 // BUFFER=
@@ -35,7 +25,7 @@ public:
 
     Buffer(int log_size) 
         : log_size(log_size), 
-          capacity(1L << log_size),
+          capacity(1L << log_size), //1L: treat as long integer
           segment(new atomic<T>[capacity]) 
     {
         for (long i = 0; i < capacity; ++i) {
@@ -65,20 +55,6 @@ public:
     }
 };
 //_______________________________
-//===============================
-// Memory management placeholder=
-//===============================
-// Crucial for safely deleting old buffers.
-struct Reclaimer {
-    template <typename T>
-    void reclaim(Buffer<T>* buffer) {
-        if (buffer) {
-            // It assumes no other thread is still using 'buffer'.
-            delete buffer;
-        }
-    }
-};
-//_______________________________
 //===========
 // BITSTREAM=
 //===========
@@ -87,10 +63,9 @@ public:
     // Alias for type of stream 
     typedef long size_type; 
 
-    BitStream() 
+    BitStream()
         : top(0), 
-          bottom(0),
-          reclaimer()
+          bottom(0)
     {
         // Initial capacity: 2^log_initial_size = 16 elements (uint64_t)
         // Total bits: 16 * 64 = 1024 bits
@@ -101,7 +76,6 @@ public:
     ~BitStream() {
         // Clean up the main buffer and any pending unlinked buffer
         delete buffer;
-        reclaimer.reclaim(unlinked);
     }
     
     // Returns the current number of available bits in the stream
@@ -193,14 +167,7 @@ public:
             // Write the updated 64-bit chunk back
             a->put(element_index, current_chunk);
         }
-        
-        // Clean up logic
-        // When buffer grows the old buffer pointer is stored in "unlinked"
-        //  Ensures that memory from smaller stream array is handled.
-        reclaimer.reclaim(unlinked);
-        unlinked = nullptr;
     }
-
     //=============
     // Read method=
     //=============
@@ -227,7 +194,7 @@ public:
         // Atomically claim the index range (t_start, t_next)
         // Advance top pointer to claim range index from t_start up tp t_next
         } while (!top.compare_exchange_strong(t_start, t_next,
-                                            std::memory_order_seq_cst,
+                                            std::memory_order_acquire,
                                             std::memory_order_relaxed));
         
         // After successful CAS, t_start is the confirmed starting bit index.
@@ -236,7 +203,7 @@ public:
         // Mask to ensure values are placed in MSB first order
         unsigned long current_mask = 1UL << (bits - 1);
         
-        // Loop 2: Read bit by bit from the reserved indices
+        // Loop: Read bit by bit from the reserved indices
         for (int i = 0; i < bits; ++i) {
             // GLOBAL INDEX: Position of bits in sequence
             // Calculate index of the bit being process
@@ -274,7 +241,7 @@ private:
     Buffer<uint64_t> *unlinked;
 
     // Safety mechanism: prevents "Use After Free" bugs
-    Reclaimer reclaimer;
+    //Reclaimer reclaimer;
     
     // Initial capacity: 2^log_initial_size = 16 elements (uint64_t)
     // Total bits: 16 * 64 = 1024 bits

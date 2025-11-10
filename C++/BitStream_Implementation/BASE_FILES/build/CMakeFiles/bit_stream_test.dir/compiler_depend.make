@@ -79,7 +79,6 @@ CMakeFiles/bit_stream_test.dir/test.cpp.o: /home/nephilim/Coding_portfolio/C++/B
   /usr/include/c++/10/bits/shared_ptr.h \
   /usr/include/c++/10/bits/shared_ptr_atomic.h \
   /usr/include/c++/10/bits/shared_ptr_base.h \
-  /usr/include/c++/10/bits/specfun.h \
   /usr/include/c++/10/bits/sstream.tcc \
   /usr/include/c++/10/bits/std_abs.h \
   /usr/include/c++/10/bits/std_function.h \
@@ -122,7 +121,6 @@ CMakeFiles/bit_stream_test.dir/test.cpp.o: /home/nephilim/Coding_portfolio/C++/B
   /usr/include/c++/10/cerrno \
   /usr/include/c++/10/chrono \
   /usr/include/c++/10/clocale \
-  /usr/include/c++/10/cmath \
   /usr/include/c++/10/compare \
   /usr/include/c++/10/concepts \
   /usr/include/c++/10/cstddef \
@@ -179,18 +177,6 @@ CMakeFiles/bit_stream_test.dir/test.cpp.o: /home/nephilim/Coding_portfolio/C++/B
   /usr/include/c++/10/string_view \
   /usr/include/c++/10/system_error \
   /usr/include/c++/10/thread \
-  /usr/include/c++/10/tr1/bessel_function.tcc \
-  /usr/include/c++/10/tr1/beta_function.tcc \
-  /usr/include/c++/10/tr1/ell_integral.tcc \
-  /usr/include/c++/10/tr1/exp_integral.tcc \
-  /usr/include/c++/10/tr1/gamma.tcc \
-  /usr/include/c++/10/tr1/hypergeometric.tcc \
-  /usr/include/c++/10/tr1/legendre_function.tcc \
-  /usr/include/c++/10/tr1/modified_bessel_func.tcc \
-  /usr/include/c++/10/tr1/poly_hermite.tcc \
-  /usr/include/c++/10/tr1/poly_laguerre.tcc \
-  /usr/include/c++/10/tr1/riemann_zeta.tcc \
-  /usr/include/c++/10/tr1/special_function_util.h \
   /usr/include/c++/10/tuple \
   /usr/include/c++/10/type_traits \
   /usr/include/c++/10/typeinfo \
@@ -229,7 +215,6 @@ CMakeFiles/bit_stream_test.dir/test.cpp.o: /home/nephilim/Coding_portfolio/C++/B
   /usr/include/linux/stddef.h \
   /usr/include/linux/types.h \
   /usr/include/locale.h \
-  /usr/include/math.h \
   /usr/include/pthread.h \
   /usr/include/regex.h \
   /usr/include/sched.h \
@@ -258,20 +243,11 @@ CMakeFiles/bit_stream_test.dir/test.cpp.o: /home/nephilim/Coding_portfolio/C++/B
   /usr/include/x86_64-linux-gnu/bits/errno.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
-  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
   /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
@@ -390,39 +366,7 @@ CMakeFiles/bit_stream_test.dir/test.cpp.o: /home/nephilim/Coding_portfolio/C++/B
 
 /usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
-/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
-
-/usr/include/x86_64-linux-gnu/c++/10/bits/time_members.h:
-
-/usr/include/x86_64-linux-gnu/c++/10/bits/os_defines.h:
-
-/usr/include/x86_64-linux-gnu/c++/10/bits/gthr.h:
-
-/usr/include/x86_64-linux-gnu/c++/10/bits/gthr-default.h:
-
-/usr/include/x86_64-linux-gnu/c++/10/bits/error_constants.h:
-
-/usr/include/x86_64-linux-gnu/c++/10/bits/cxxabi_tweaks.h:
-
-/usr/include/x86_64-linux-gnu/c++/10/bits/ctype_inline.h:
-
-/usr/include/x86_64-linux-gnu/c++/10/bits/cpu_defines.h:
-
-/usr/include/x86_64-linux-gnu/c++/10/bits/c++config.h:
-
-/usr/include/x86_64-linux-gnu/c++/10/bits/atomic_word.h:
-
-/usr/include/x86_64-linux-gnu/bits/wordsize.h:
-
-/usr/include/x86_64-linux-gnu/bits/wchar.h:
-
-/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
-
-/usr/include/x86_64-linux-gnu/bits/waitflags.h:
-
-/usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
-
-/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
+/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
 
 /usr/include/x86_64-linux-gnu/sys/stat.h:
 
@@ -435,8 +379,6 @@ CMakeFiles/bit_stream_test.dir/test.cpp.o: /home/nephilim/Coding_portfolio/C++/B
 /usr/include/c++/10/bits/exception.h:
 
 /usr/include/stdio.h:
-
-/usr/include/x86_64-linux-gnu/bits/fp-fast.h:
 
 /usr/include/c++/10/istream:
 
@@ -451,6 +393,16 @@ CMakeFiles/bit_stream_test.dir/test.cpp.o: /home/nephilim/Coding_portfolio/C++/B
 /usr/include/c++/10/ext/atomicity.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
+
+/usr/include/c++/10/ext/aligned_buffer.h:
+
+/usr/include/c++/10/exception:
+
+/usr/include/c++/10/cxxabi.h:
+
+/usr/include/c++/10/list:
+
+/usr/include/c++/10/cwchar:
 
 /usr/include/gtest/internal/gtest-port-arch.h:
 
@@ -470,15 +422,9 @@ CMakeFiles/bit_stream_test.dir/test.cpp.o: /home/nephilim/Coding_portfolio/C++/B
 
 /usr/include/x86_64-linux-gnu/bits/locale.h:
 
+/usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
+
 /usr/include/c++/10/concepts:
-
-/usr/include/c++/10/cxxabi.h:
-
-/usr/include/c++/10/list:
-
-/usr/include/c++/10/cmath:
-
-/usr/include/c++/10/bits/ranges_uninitialized.h:
 
 /usr/include/c++/10/clocale:
 
@@ -493,10 +439,6 @@ CMakeFiles/bit_stream_test.dir/test.cpp.o: /home/nephilim/Coding_portfolio/C++/B
 /usr/include/c++/10/bits/vector.tcc:
 
 /usr/include/c++/10/bits/ostream_insert.h:
-
-/usr/include/x86_64-linux-gnu/bits/typesizes.h:
-
-/usr/include/c++/10/bits/string_view.tcc:
 
 /usr/include/c++/10/bits/unordered_map.h:
 
@@ -526,6 +468,8 @@ CMakeFiles/bit_stream_test.dir/test.cpp.o: /home/nephilim/Coding_portfolio/C++/B
 
 /usr/include/c++/10/bits/basic_string.tcc:
 
+/usr/include/c++/10/type_traits:
+
 /usr/include/c++/10/bits/stl_pair.h:
 
 /usr/include/c++/10/ext/string_conversions.h:
@@ -541,10 +485,6 @@ CMakeFiles/bit_stream_test.dir/test.cpp.o: /home/nephilim/Coding_portfolio/C++/B
 /usr/include/c++/10/iosfwd:
 
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
-
-/usr/include/x86_64-linux-gnu/c++/10/bits/ctype_base.h:
-
-/usr/include/c++/10/compare:
 
 /usr/include/c++/10/bits/basic_ios.h:
 
@@ -570,6 +510,8 @@ CMakeFiles/bit_stream_test.dir/test.cpp.o: /home/nephilim/Coding_portfolio/C++/B
 
 /usr/include/c++/10/bits/stl_multiset.h:
 
+/usr/include/c++/10/bits/sstream.tcc:
+
 /usr/include/asm-generic/posix_types.h:
 
 /usr/include/c++/10/ext/alloc_traits.h:
@@ -578,13 +520,15 @@ CMakeFiles/bit_stream_test.dir/test.cpp.o: /home/nephilim/Coding_portfolio/C++/B
 
 /usr/include/c++/10/bits/cxxabi_init_exception.h:
 
-/usr/include/x86_64-linux-gnu/c++/10/bits/messages_members.h:
-
-/usr/include/c++/10/bits/concept_check.h:
-
 /usr/include/c++/10/bits/postypes.h:
 
+/usr/include/c++/10/bits/string_view.tcc:
+
+/usr/include/x86_64-linux-gnu/bits/typesizes.h:
+
 /usr/include/c++/10/bits/hashtable_policy.h:
+
+/usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
 /usr/include/c++/10/bits/stl_algobase.h:
 
@@ -597,10 +541,6 @@ CMakeFiles/bit_stream_test.dir/test.cpp.o: /home/nephilim/Coding_portfolio/C++/B
 /usr/include/c++/10/bits/atomic_lockfree_defines.h:
 
 /usr/include/c++/10/iterator:
-
-/usr/include/c++/10/cwchar:
-
-/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
 
 /usr/include/c++/10/bits/allocated_ptr.h:
 
@@ -654,7 +594,9 @@ CMakeFiles/bit_stream_test.dir/test.cpp.o: /home/nephilim/Coding_portfolio/C++/B
 
 /usr/include/x86_64-linux-gnu/bits/signum-generic.h:
 
-/usr/include/c++/10/tr1/ell_integral.tcc:
+/usr/include/c++/10/bits/concept_check.h:
+
+/usr/include/x86_64-linux-gnu/c++/10/bits/messages_members.h:
 
 /home/nephilim/Coding_portfolio/C++/BitStream_Implementation/BASE_FILES/reference.hpp:
 
@@ -669,10 +611,6 @@ CMakeFiles/bit_stream_test.dir/test.cpp.o: /home/nephilim/Coding_portfolio/C++/B
 /usr/include/gtest/internal/gtest-filepath.h:
 
 /usr/include/c++/10/ostream:
-
-/usr/include/c++/10/ext/aligned_buffer.h:
-
-/usr/include/c++/10/tr1/exp_integral.tcc:
 
 /usr/include/x86_64-linux-gnu/bits/statx.h:
 
@@ -724,8 +662,6 @@ CMakeFiles/bit_stream_test.dir/test.cpp.o: /home/nephilim/Coding_portfolio/C++/B
 
 /usr/include/c++/10/bits/locale_facets_nonio.h:
 
-/usr/include/c++/10/tr1/beta_function.tcc:
-
 /usr/include/c++/10/backward/binders.h:
 
 /usr/include/c++/10/bits/list.tcc:
@@ -752,8 +688,6 @@ CMakeFiles/bit_stream_test.dir/test.cpp.o: /home/nephilim/Coding_portfolio/C++/B
 
 /usr/include/c++/10/map:
 
-/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
-
 /usr/include/c++/10/bits/range_access.h:
 
 /usr/include/c++/10/bits/refwrap.h:
@@ -762,8 +696,6 @@ CMakeFiles/bit_stream_test.dir/test.cpp.o: /home/nephilim/Coding_portfolio/C++/B
 
 /usr/include/unistd.h:
 
-/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
-
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
 
 /usr/include/c++/10/ios:
@@ -771,10 +703,6 @@ CMakeFiles/bit_stream_test.dir/test.cpp.o: /home/nephilim/Coding_portfolio/C++/B
 /usr/include/linux/posix_types.h:
 
 /usr/include/c++/10/bits/move.h:
-
-/usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
-
-/usr/include/gtest/internal/custom/gtest-printers.h:
 
 /usr/include/c++/10/pstl/glue_algorithm_defs.h:
 
@@ -792,8 +720,6 @@ CMakeFiles/bit_stream_test.dir/test.cpp.o: /home/nephilim/Coding_portfolio/C++/B
 
 /usr/include/c++/10/bits/node_handle.h:
 
-/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
-
 /usr/include/c++/10/bits/range_cmp.h:
 
 /usr/include/c++/10/set:
@@ -801,6 +727,8 @@ CMakeFiles/bit_stream_test.dir/test.cpp.o: /home/nephilim/Coding_portfolio/C++/B
 /usr/include/x86_64-linux-gnu/asm/errno.h:
 
 /usr/include/c++/10/bits/stl_raw_storage_iter.h:
+
+/usr/include/c++/10/bits/ranges_uninitialized.h:
 
 /usr/include/x86_64-linux-gnu/c++/10/bits/c++allocator.h:
 
@@ -817,8 +745,6 @@ CMakeFiles/bit_stream_test.dir/test.cpp.o: /home/nephilim/Coding_portfolio/C++/B
 /usr/include/c++/10/bits/shared_ptr_atomic.h:
 
 /usr/include/c++/10/stdexcept:
-
-/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
 
 /usr/include/c++/10/bits/algorithmfwd.h:
 
@@ -837,44 +763,6 @@ CMakeFiles/bit_stream_test.dir/test.cpp.o: /home/nephilim/Coding_portfolio/C++/B
 /usr/include/c++/10/string_view:
 
 /usr/include/c++/10/thread:
-
-/usr/include/c++/10/tr1/bessel_function.tcc:
-
-/usr/include/x86_64-linux-gnu/bits/errno.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
-
-/usr/include/c++/10/bits/sstream.tcc:
-
-/usr/include/c++/10/tr1/gamma.tcc:
-
-/usr/include/c++/10/tr1/hypergeometric.tcc:
-
-/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
-
-/usr/include/c++/10/tr1/legendre_function.tcc:
-
-/usr/include/c++/10/tr1/modified_bessel_func.tcc:
-
-/usr/include/string.h:
-
-/usr/include/c++/10/ratio:
-
-/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
-
-/usr/include/c++/10/tr1/poly_hermite.tcc:
-
-/usr/include/c++/10/tr1/poly_laguerre.tcc:
-
-/usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
-
-/usr/include/c++/10/tr1/riemann_zeta.tcc:
-
-/usr/include/c++/10/debug/debug.h:
-
-/usr/include/errno.h:
-
-/usr/include/c++/10/tr1/special_function_util.h:
 
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
 
@@ -904,7 +792,9 @@ CMakeFiles/bit_stream_test.dir/test.cpp.o: /home/nephilim/Coding_portfolio/C++/B
 
 /usr/include/endian.h:
 
-/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
+/usr/include/c++/10/debug/debug.h:
+
+/usr/include/errno.h:
 
 /usr/include/gtest/gtest-death-test.h:
 
@@ -919,6 +809,8 @@ CMakeFiles/bit_stream_test.dir/test.cpp.o: /home/nephilim/Coding_portfolio/C++/B
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
 
 /usr/include/gtest/gtest-message.h:
+
+/usr/include/gtest/gtest-param-test.h:
 
 /usr/include/c++/10/memory:
 
@@ -953,8 +845,6 @@ CMakeFiles/bit_stream_test.dir/test.cpp.o: /home/nephilim/Coding_portfolio/C++/B
 /usr/include/linux/types.h:
 
 /usr/include/locale.h:
-
-/usr/include/math.h:
 
 /usr/include/pthread.h:
 
@@ -998,13 +888,15 @@ CMakeFiles/bit_stream_test.dir/test.cpp.o: /home/nephilim/Coding_portfolio/C++/B
 
 /usr/include/x86_64-linux-gnu/asm/posix_types_64.h:
 
-/usr/include/c++/10/bits/specfun.h:
-
 /usr/include/c++/10/bits/allocator.h:
 
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
 /usr/include/x86_64-linux-gnu/bits/cpu-set.h:
+
+/usr/include/x86_64-linux-gnu/bits/errno.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
 
 /usr/include/x86_64-linux-gnu/bits/endianness.h:
 
@@ -1016,23 +908,13 @@ CMakeFiles/bit_stream_test.dir/test.cpp.o: /home/nephilim/Coding_portfolio/C++/B
 
 /usr/include/x86_64-linux-gnu/bits/getopt_core.h:
 
-/usr/include/gtest/gtest-param-test.h:
-
-/usr/include/x86_64-linux-gnu/bits/iscanonical.h:
-
-/usr/include/c++/10/exception:
-
-/usr/include/x86_64-linux-gnu/bits/math-vector.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h:
-
-/usr/include/c++/10/type_traits:
-
-/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
-
 /usr/include/x86_64-linux-gnu/bits/posix_opt.h:
+
+/usr/include/c++/10/ratio:
+
+/usr/include/string.h:
+
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
 
 /usr/include/x86_64-linux-gnu/bits/sched.h:
 
@@ -1054,11 +936,19 @@ CMakeFiles/bit_stream_test.dir/test.cpp.o: /home/nephilim/Coding_portfolio/C++/B
 
 /usr/include/x86_64-linux-gnu/bits/types/FILE.h:
 
+/usr/include/x86_64-linux-gnu/c++/10/bits/atomic_word.h:
+
 /usr/include/x86_64-linux-gnu/bits/statx-generic.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 
+/usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
+
+/usr/include/x86_64-linux-gnu/c++/10/bits/gthr.h:
+
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
+
+/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
 /usr/include/x86_64-linux-gnu/bits/sys_errlist.h:
 
@@ -1076,13 +966,19 @@ CMakeFiles/bit_stream_test.dir/test.cpp.o: /home/nephilim/Coding_portfolio/C++/B
 
 /usr/include/x86_64-linux-gnu/bits/types.h:
 
+/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
+
 /usr/include/x86_64-linux-gnu/c++/10/bits/c++locale.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 
+/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
+
 /usr/include/c++/10/bits/ostream.tcc:
 
 /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
+
+/usr/include/x86_64-linux-gnu/c++/10/bits/ctype_inline.h:
 
 /usr/include/c++/10/bits/uniform_int_dist.h:
 
@@ -1114,4 +1010,36 @@ CMakeFiles/bit_stream_test.dir/test.cpp.o: /home/nephilim/Coding_portfolio/C++/B
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h:
 
+/usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/waitflags.h:
+
+/usr/include/x86_64-linux-gnu/c++/10/bits/gthr-default.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
+
+/usr/include/x86_64-linux-gnu/bits/wchar.h:
+
+/usr/include/gtest/internal/custom/gtest-printers.h:
+
+/usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
+
+/usr/include/x86_64-linux-gnu/c++/10/bits/c++config.h:
+
+/usr/include/x86_64-linux-gnu/c++/10/bits/cpu_defines.h:
+
+/usr/include/c++/10/compare:
+
+/usr/include/x86_64-linux-gnu/c++/10/bits/ctype_base.h:
+
+/usr/include/x86_64-linux-gnu/c++/10/bits/cxxabi_tweaks.h:
+
+/usr/include/x86_64-linux-gnu/c++/10/bits/error_constants.h:
+
+/usr/include/x86_64-linux-gnu/c++/10/bits/os_defines.h:
+
+/usr/include/x86_64-linux-gnu/c++/10/bits/time_members.h:

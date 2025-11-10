@@ -5,7 +5,7 @@
 #include <gtest/gtest.h>
 
 
-//=== NEW IMPLEMENTATION============
+//=== NEW TEST============
 #include <chrono>
 #include <iostream>
 #include <thread>
@@ -18,6 +18,9 @@
 // OPERATIONS=
 //============
 // Number of write/read operations per thread
+//const int BATCH_SIZE = 100000; 
+//const int BATCH_SIZE = 250000; 
+//const int BATCH_SIZE = 500000; 
 const int BATCH_SIZE = 1000000; 
 
 using std::chrono::high_resolution_clock;
